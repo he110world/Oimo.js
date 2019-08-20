@@ -527,7 +527,7 @@ Object.assign( World.prototype, {
             var b1 = contact.body1;
             var b2 = contact.body2;
 
-            if( b1.isDynamic && !b1.sleeping || b2.isDynamic && !b2.sleeping ) contact.updateManifold();
+	    if( (b1.isDynamic && !b1.sleeping || b2.isDynamic && !b2.sleeping) && (!b1.isTrigger && !b2.isTrigger) ) contact.updateManifold();
 
             this.numContactPoints += contact.manifold.numPoints;
             contact.persisting = false;
