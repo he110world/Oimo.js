@@ -866,9 +866,12 @@ Object.assign( World.prototype, {
         // body static or dynamic
         if( move ){
 
-            if(o.massPos || o.massRot) body.setupMass( BODY_DYNAMIC, false );
-            else body.setupMass( BODY_DYNAMIC, true );
-
+            //if(o.massPos || o.massRot) body.setupMass( BODY_DYNAMIC, false );
+            //else body.setupMass( BODY_DYNAMIC, true );
+		
+		//temp code
+		body.setupMass(BODY_DYNAMIC, false);
+		
             // body can sleep or not
             //if( o.neverSleep ) body.allowSleep = false;
             //else body.allowSleep = true;
