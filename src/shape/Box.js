@@ -44,6 +44,15 @@ Box.prototype = Object.assign( Object.create( Shape.prototype ), {
 		);
 
 	},
+	
+	setSize: function(w,h,d){
+		this.width = w;
+		this.height = h;
+		this.depth = d;
+		this.halfWidth = w * 0.5;
+		this.halfHeight = h * 0.5;
+		this.halfDepth = d * 0.5;
+	},
 
 	updateProxy: function () {
 
