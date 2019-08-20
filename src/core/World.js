@@ -763,6 +763,7 @@ Object.assign( World.prototype, {
         // body dynamic or static
         var move = o.move || false;
         var kinematic = o.kinematic || false;
+	var isTrigger = o.isTrigger || false;
 
         // POSITION
 
@@ -860,6 +861,7 @@ Object.assign( World.prototype, {
         else body.allowSleep = true;
 
         body.isKinematic = kinematic;
+	body.isTrigger = isTrigger;
 
         // body static or dynamic
         if( move ){
