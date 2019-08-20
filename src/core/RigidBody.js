@@ -451,6 +451,12 @@ Object.assign( RigidBody.prototype, {
         this.controlRot = true;
 
     },
+	//temp code
+	setSize: function(size){
+		 for( var shape = this.shapes; shape !== null; shape = shape.next ){
+			 shape.setSize(size);
+		 }
+	},
 
     //---------------------------------------------
     // RESET DYNAMIQUE POSITION AND ROTATION
